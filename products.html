@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        body {     
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.products-section {
+  background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+             url('images/products-background.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.products-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffc500;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #2c2c2c;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  color: #fff;
+}
+
+.product-card p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.product-card button {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #00bfa5;
+}
+.product-rating {
+  color: #6b591d;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.product-rating i.active {
+  color: #ffc500;
+}
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <nav class="navbar">
+          <div class="logo-container">
+            <img src="images/logo.jpg" class="logo" alt="Logo">
+          </div>
+          <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="https://sipandstyle.blogspot.com/2025/03/sip-and-style.html" target="_blank">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="Login.html" class="login-btn">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Products Section -->
+  <section class="products-section">
+    <h2>Our Tumblers</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="product-images/aqua1.webp" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua2.jpg" alt="Dark gray AquaFlask 22oz tumbler with a minimalist design and matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua3.jpg" alt="Bright blue AquaFlask 22oz tumbler with matching box and red cap strap."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua4.jpg" alt="Earth-toned green AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua5.webp" alt="Bright red AquaFlask 22oz tumbler with vibrant red box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua6.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua7.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua8.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua9.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua10.webp" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua11.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua12.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua13.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua14.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua15.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua16.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua17.webp" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua18.webp" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua19.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua20.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua21.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua22.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua23.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua24.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="product-images/aqua26.jpg" alt="Turquoise blue AquaFlask 22oz tumbler with matching box."/>
+            <h3>Aquaflask 22oz</h3>
+            <!-- Star Rating (interactive) -->
+            <div class="product-rating interactive" data-rating="0">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" class="rating-value" value="0">
+            <p>₱700.00 PHP</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" name="quantity" min="1" max="99" value="1" class="quantity-input">
+            <button>Add to Cart</button>
+          </div>
+    </div>
+  </section>
+
+      <div class="footer">
+        <div class="container">
+           <div class="row">
+               <div class="footer-col">
+                   <h4>Company</h4>
+                   <ul>
+                       <li><a href="aboutus.html">About us</a></li>
+                       <li><a href="products.html">Our products</a></li>
+                       <li><a href="privacy.html">Privacy policy</a></li>
+                       <li><a href="contact.html">Contact Form</a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>Get Help</h4>
+                   <ul>
+                       <li><a href="faq.html">FAQ</a></li>
+                       <li><a href="testimonial.html">Testimonials</a></li>
+                       <li><a href="howitwork.html">How It Works</a></li>
+                       <li><a href="tutorials.html">Tutorials</a></li>
+                       <li><a href="customersupport.html">Customer Support</a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>Follow us</h4>
+                   <div class="social-logo">
+                       <a href="https://web.facebook.com/profile.php?id=61569635547947&mibextid=wwXIfr&rdid=PW5MyI33vxtbdFJc&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F15ntDTavL4%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                       <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+                       <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+                       <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                   </div>
+               </div>
+               </div>
+           </div>
+        </div>
+   </div>
+   <script>
+    document.querySelectorAll('.product-rating.interactive').forEach(ratingEl => {
+      const stars = ratingEl.querySelectorAll('i');
+      const hiddenInput = ratingEl.nextElementSibling;
+  
+      stars.forEach(star => {
+        star.addEventListener('click', () => {
+          const value = parseInt(star.getAttribute('data-value'));
+          ratingEl.setAttribute('data-rating', value);
+          hiddenInput.value = value;
+  
+          stars.forEach(s => {
+            s.classList.remove('active');
+            if (parseInt(s.getAttribute('data-value')) <= value) {
+              s.classList.add('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+    
+</body>
+</html>

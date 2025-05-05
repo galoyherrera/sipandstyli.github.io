@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Tumbler Head</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    .testimonial-section {
+      background: linear-gradient(rgba(20, 20, 20, 0.95), rgba(20, 20, 20, 0.95)), url('images/testimonials-background.jpg') center/cover no-repeat;
+      padding: 100px 20px 60px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00e0b8;
+    }
+
+    .testimonial-section p.subheading {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 50px;
+    }
+
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card .stars {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card .user {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .testimonial-card .user img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #00e0b8;
+    }
+
+    .testimonial-card .user-info {
+      text-align: left;
+    }
+
+    .testimonial-card .user-info h4 {
+      font-size: 16px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .testimonial-card .user-info span {
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-section h2 {
+        font-size: 28px;
+      }
+      .testimonial-section p.subheading {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <div class="banner">
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="images/logo.jpg" class="logo" alt="Logo">
+      </div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="https://sipandstyle.blogspot.com/2025/03/sip-and-style.html" target="_blank">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="Login.html" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonial-section">
+    <h2>What Our Customers Say</h2>
+    <p class="subheading">Real feedback from our amazing customers who love our tumblers.</p>
+
+    <div class="testimonial-container">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p>"Absolutely love my Aquaflask from Sip and Style! Keeps my drink cold for hours. Sleek design too!"</p>
+        <div class="user">
+          <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 1">
+          <div class="user-info">
+            <h4>Maria L.</h4>
+            <span>Legazpi City</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Amazing quality and very affordable! My tumbler still looks new after months of daily use."</p>
+        <div class="user">
+          <img src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 2">
+          <div class="user-info">
+            <h4>Jerson D.</h4>
+            <span>Customer since 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+        <p>"Fast delivery and great customer service. Definitely buying more for gifts!"</p>
+        <div class="user">
+          <img src="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 3">
+          <div class="user-info">
+            <h4>Grace P.</h4>
+            <span>Happy Customer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Our products</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="howitwork.html">How It Works</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="customersupport.html">Customer Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-logo">
+            <a href="https://web.facebook.com/profile.php?id=61569635547947" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

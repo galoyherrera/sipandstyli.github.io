@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Tumbler Head</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+        url('images/log-background.jpg') no-repeat center center/cover;
+        background-color: #121212;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .login-container {
+        width: 100%;
+        max-width: 350px;
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    .input-box {
+        position: relative;
+        margin-bottom: 15px;
+    }
+    
+    .input-box i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+    
+    .input-box input {
+        width: 100%;
+        padding: 12px 10px 12px 35px;
+        background: #252525;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        outline: none;
+    }
+    
+    .input-box input:focus {
+        border: 1px solid #009688;
+    }
+    
+    .login-btn {
+        width: 100%;
+        padding: 12px;
+        background: #009688;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .login-btn:hover {
+        background: #00796b;
+    }
+    
+    .options {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    
+    .options a {
+        color: #009688;
+        text-decoration: none;
+    }
+    
+    .options a:hover {
+        text-decoration: underline;
+    }
+    </style>
+    
+<body>
+    <div class="login-container">
+        <form class="login-box" onsubmit="event.preventDefault(); window.location.href='index.html';">
+            <h2>Login</h2>
+            <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="options">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Create Account</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+      
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('open');
+        });
+      </script>
+</body>
+</html>
